@@ -49,7 +49,7 @@ def add_user():
 @app.route('/user', methods=['GET'])
 def get_user():
     all_users = User.query.all()
-    result = users_schema.dump(all_users) # Convert db objects into json using marshmallow
+    result = users_schema.dump(all_users)  # Convert db objects into json using marshmallow
     return jsonify(result.data)
 
 
